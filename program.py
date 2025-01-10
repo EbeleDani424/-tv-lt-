@@ -2,7 +2,6 @@
 # and modules which are available in
 # tkinter and ttk module
 from tkinter import *
-from tkinter.ttk import *
 
 # creates a Tk() object
 root = Tk()
@@ -25,15 +24,20 @@ def hWin():
 	hosszWin.title("New Window")
 
 	# sets the geometry of toplevel
-	hosszWin.geometry("200x200")
-
-    Entry(root,textvariable = name_var, font=('calibre',10,'normal'))
-
+	hosszWin.geometry("400x300")
 
 
 	# A Label widget to show in toplevel
-	Label(newWindow, 
-		text ="This is a new window").pack()
+	L1 = Label(hosszWin, text="Hossz válátás")
+	L1.grid(row= 0, column=1)
+	E1 = Entry(hosszWin, bd =5)
+	E1.grid(row=1,column=0)
+	gValt = Button(hosszWin, 
+			text ="Átvált", 
+			command = hWin)
+	gValt.grid(row=1,column=1)
+
+	
 
 def tWin():
 	
