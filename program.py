@@ -5,20 +5,54 @@ from tkinter import *
 from tkinter.ttk import *
 
 # creates a Tk() object
-master = Tk()
+root = Tk()
 
 # sets the geometry of main 
 # root window
-master.geometry("200x200")
+root.geometry("200x200")
 
 
 # function to open a new window 
 # on a button click
-def openNewWindow():
+def hWin():
 	
 	# Toplevel object which will 
 	# be treated as a new window
-	newWindow = Toplevel(master)
+	newWindow = Toplevel(root)
+
+	# sets the title of the
+	# Toplevel widget
+	newWindow.title("New Window")
+
+	# sets the geometry of toplevel
+	newWindow.geometry("200x200")
+
+	# A Label widget to show in toplevel
+	Label(newWindow, 
+		text ="This is a new window").pack()
+
+def tWin():
+	
+	# Toplevel object which will 
+	# be treated as a new window
+	newWindow = Toplevel(root)
+
+	# sets the title of the
+	# Toplevel widget
+	newWindow.title("New Window")
+
+	# sets the geometry of toplevel
+	newWindow.geometry("200x200")
+
+	# A Label widget to show in toplevel
+	Label(newWindow, 
+		text ="This is a new window").pack()
+
+def sWin():
+	
+	# Toplevel object which will 
+	# be treated as a new window
+	newWindow = Toplevel(root)
 
 	# sets the title of the
 	# Toplevel widget
@@ -32,16 +66,24 @@ def openNewWindow():
 		text ="This is a new window").pack()
 
 
-label = Label(master, 
-			text ="This is the main window")
+label = Label(root, 
+			text ="Átváltó")
 
 label.pack(pady = 10)
 
 # a button widget which will open a 
 # new window on button click
-btn = Button(master, 
-			text ="Click to open a new window", 
-			command = openNewWindow)
+btn = Button(root, 
+			text ="Hossz", 
+			command = hWin)
+btn.pack(pady = 10)
+btn = Button(root, 
+			text ="Tömeg", 
+			command = tWin)
+btn.pack(pady = 10)
+btn = Button(root, 
+			text ="Sebesség", 
+			command = sWin)
 btn.pack(pady = 10)
 
 # mainloop, runs infinitely
