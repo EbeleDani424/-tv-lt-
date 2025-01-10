@@ -11,6 +11,7 @@ root = Tk()
 root.geometry("200x200")
 
 
+
 # function to open a new window 
 # on a button click
 def hWin():
@@ -30,12 +31,18 @@ def hWin():
 	# A Label widget to show in toplevel
 	L1 = Label(hosszWin, text="Hossz válátás")
 	L1.grid(row= 0, column=1)
+
 	E1 = Entry(hosszWin, bd =5)
 	E1.grid(row=1,column=0)
-	gValt = Button(hosszWin, 
-			text ="Átvált", 
-			command = hWin)
-	gValt.grid(row=1,column=1)
+
+	gValt = Button(hosszWin, text ="Átvált", command = hWin)
+	gValt.grid(row=1,column=4)
+
+
+	
+	Hclicked = StringVar() 
+	hDrop = OptionMenu( hosszWin , Hclicked , "mm", "cm", "dm", "m" )
+	hDrop.grid(row=1,column=1)
 
 	
 
