@@ -57,10 +57,15 @@ def tWin():
 	Label1.grid(row= 0, column=1)
 	Entry1 = Entry(tomegWin, bd =5)
 	Entry1.grid(row=1,column=0)
-	atValt = Button(tomegWin, 
-			text ="Átvált", 
-			command = tWin)
-	atValt.grid(row=1,column=1)
+	
+	Atvalt = Button(tomegWin, text ="Átvált", command = tWin)
+	Atvalt.grid(row=1,column=3)
+	
+	Hclicked = StringVar() 
+	beDrop = OptionMenu( tomegWin , Hclicked , "g", "dkg", "kg", "t" )
+	beDrop.grid(row=1,column=1)
+	kiDrop = OptionMenu( tomegWin , Hclicked , "g", "dkg", "kg", "t" )
+	kiDrop.grid(row=1,column=2)
 
 
 def sWin():
