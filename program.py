@@ -41,10 +41,15 @@ def hWin():
 
 	
 	Hclicked = StringVar() 
+	Hclicked.set("mm")
 	hDrop = OptionMenu( hosszWin , Hclicked , "mm", "cm", "dm", "m" )
 	hDrop.grid(row=1,column=1)
 
-	
+	Hclicked2 = StringVar()
+	Hclicked2.set("mm")
+	hDrop2 = OptionMenu( hosszWin , Hclicked2 , "mm", "cm", "dm", "m" )
+	hDrop2.grid(row=1,column=2)
+
 
 def tWin():
 	
