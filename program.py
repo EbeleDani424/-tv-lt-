@@ -18,14 +18,18 @@ def hWin():
 	
 	# Toplevel object which will 
 	# be treated as a new window
-	newWindow = Toplevel(root)
+	hosszWin = Toplevel(root)
 
 	# sets the title of the
 	# Toplevel widget
-	newWindow.title("New Window")
+	hosszWin.title("New Window")
 
 	# sets the geometry of toplevel
-	newWindow.geometry("200x200")
+	hosszWin.geometry("200x200")
+
+    Entry(root,textvariable = name_var, font=('calibre',10,'normal'))
+
+
 
 	# A Label widget to show in toplevel
 	Label(newWindow, 
