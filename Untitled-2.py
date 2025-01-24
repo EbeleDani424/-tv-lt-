@@ -3,7 +3,7 @@ from tkinter import ttk
 
 # Átváltási formulák
 def convert_length(value, from_unit, to_unit):
-    length_units = {'yard': 1, 'mérföld': 1760, 'kilométer': 1094, 'méter': 1.09361, 'milliméter': 1093.61}
+    length_units = {'yard': 0.9144, 'mérföld': 1609.344, 'kilométer': 1000, 'méter': 1, 'milliméter': 0.001}
     value_in_yards = value * length_units[from_unit]
     return value_in_yards / length_units[to_unit]
 
