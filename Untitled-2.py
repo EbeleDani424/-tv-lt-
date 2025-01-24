@@ -8,7 +8,7 @@ def convert_length(value, from_unit, to_unit):
     return value_in_yards / length_units[to_unit]
 
 def convert_mass(value, from_unit, to_unit):
-    mass_units = {'font': 1, 'kilogramm': 2.20462, 'gramm': 0.00220462, 'tonna': 2204.62}
+    mass_units = {'font': 0.45359237, 'kilogramm': 1, 'gramm': 0.001, 'tonna': 1000}
     value_in_pounds = value * mass_units[from_unit]
     return value_in_pounds / mass_units[to_unit]
 
